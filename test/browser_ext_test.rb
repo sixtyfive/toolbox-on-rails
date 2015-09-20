@@ -22,6 +22,6 @@ class BrowserExtTest < ActiveSupport::TestCase
     assert_equal true, (browser.mobile? || browser.tablet?)
     assert_includes browser.audio_recording_capabilities, :fileupload
     assert_not_includes browser.audio_recording_capabilities, :getusermedia
-    assert_not_includes browser.audio_recording_capabilities, :wami
+    assert_not_includes browser.audio_recording_capabilities, :thirdparty
   end
 end
