@@ -30,5 +30,21 @@ String.class_eval do
   def number?
     return true if self =~ /^\d+$/
     true if Float(self) rescue false
+    # Alternative:
+    # self.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
+  end
+  alias_method :is_number?, :number?
+
+  def capitalize_all_words
+    gsub(/\w*/) { |w| w.capitalize }
+  end
+  
+  def html_escape
+    CGI::escapeHTML(self)
+  end
+  alias_method :uri, :html_escape
+  
+  def underscorize
+    self.gsub(' ', '_').gsub('&', '')
   end
 end
