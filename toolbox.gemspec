@@ -17,11 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.2.4"
   s.add_dependency "browser", ">= 1.0.1"
-<<<<<<< HEAD
-  s.add_dependency "activerecord"
-=======
   s.add_dependency "activerecord", "~> 4.2.4"
->>>>>>> fbe2d1b078d6dce51b57c670ccef812d675b2af8
 
   s.add_development_dependency "sqlite3"
 end
